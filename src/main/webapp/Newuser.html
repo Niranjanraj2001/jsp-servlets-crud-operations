@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>NewUser</title>
+<style type="text/css">
+	.hello{
+	background-color: #a5c9c7;
+	}
+	
+</style>
+<script type="text/javascript">
+
+function myFunction(){
+	var username = document.getElementById("uname").value
+	var password = document.getElementById("pwd").value
+	var mobile = document.getElementById("mobile").value
+	
+	
+	
+	if(username == "" || password == ""){
+		alert("please enter the value")
+		return false;
+		
+	}
+	else if(mobile == ""){
+		alert("please enter the mobile number")
+		return false;
+		
+	}
+	
+		
+	
+	}
+	
+	
+
+
+
+</script>
+</head>
+<body class="hello">
+
+<h1 align="center">Register Form</h1>
+	<form action="AddUser" method="post" onsubmit="return myFunction()">
+	
+	
+	
+	<table align="center">
+	<tr>
+	<td>username</td>
+	<td><input type="text" id="uname" name="username"></td>
+	</tr>
+	
+	<tr>
+	<td>password</td>
+	<td><input type="password" id="pwd" name="password"></td>
+	</tr>
+	
+	<tr>
+	<td>mobile</td>
+	<td><input type="number" id="mobile" name="mobile"></td>
+	</tr>
+	
+	<tr>
+	<td></td>
+	<td><input type="submit"></td>
+	<td><a href="login.html">Login up</a></td>
+	</tr>
+	
+	
+	</table>
+	
+	</form>
+
+</body>
+</html>
