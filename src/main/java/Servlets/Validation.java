@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/Validation")
 public class Validation extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -31,14 +31,14 @@ public class Validation extends HttpServlet {
 			
 			if("admin".equals(username) && "admin@123".equals(password)) {
 //				out.println("Welcome Admin");
-				response.sendRedirect("AdminView.jsp");
+				response.sendRedirect("AdminView.jsp");    
 				
 			}else {
 				
 				Class.forName("com.mysql.jdbc.Driver");
 				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/newuser", "root", "1234");
 				java.sql.Statement stmt =  con.createStatement();
-				
+								
 				ResultSet res = ((java.sql.Statement) stmt).executeQuery("select * from register");
 				
 				int flag =0;

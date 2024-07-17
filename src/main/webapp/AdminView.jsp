@@ -7,12 +7,26 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Admin View</title>
 <style type="text/css">
 td,th{
-padding: 8px;
-border: 1px solid black;
+padding: 10px;
 
+border: 2px solid black;
+
+}
+
+body{
+background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+background-repeat: no-repeat;
+ background-attachment: fixed;
+  background-position: center;
+}
+
+table{
+border: 2px solid black;
+background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+ border-collapse: collapse;
 }
 
 </style>
@@ -44,6 +58,8 @@ border: 1px solid black;
 		String password = res.getString("password");
 		String mobile = res.getString("mobile");
 		
+		//session.setAttribute("id",sno1);
+		
 	
 %>
 
@@ -53,7 +69,7 @@ border: 1px solid black;
 	<td><%=username %></td>	
 	<td><%=password %></td>
 	<td><%=mobile %></td>
-	<td><a href="updatepage.jsp?sno=<%=sno1 %>">Edit</a></td>
+	<td><a href="updatepage.jsp?sno=<%=sno1 %>" >Edit</a></td>
 	<td><a href="Delete?sno=<%=sno1 %>">Delete</a></td>
 	
 	</tr>
@@ -61,7 +77,7 @@ border: 1px solid black;
 	
 	
 
-<%} %>
+<%}%>
 
 
 </table>

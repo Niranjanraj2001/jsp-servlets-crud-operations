@@ -30,11 +30,9 @@ public class Delete extends HttpServlet {
 			int value = stmt.executeUpdate("delete from register where s_no = '"+id+"';");
 
 			if(value == 1){
-				out.println("Deleted Successfully");
+				response.sendRedirect("AdminView.jsp");
 			}
-			else{
-				out.println("Sorry");
-			}
+			
 			
 		}catch(Exception e)
 		{

@@ -25,7 +25,8 @@ java.sql.Statement stmt =  con.createStatement();
 int value = stmt.executeUpdate("update register set username='"+uname+"' , password = '"+pass+"' , mobile = '"+mobile+"' where s_no='"+sno+"'");
 
 if(value == 1){
-	out.println("Update Successfully");
+	
+	response.sendRedirect("AdminView.jsp");
 }
 
 %>
